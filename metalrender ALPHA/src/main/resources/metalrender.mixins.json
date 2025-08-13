@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "pebblesboon.metalrender.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "GameRendererHookMixin",
+    "SodiumRendererSwapMixin",
+    "SodiumChunkUploadMixin",
+    "SodiumChunkDeleteMixin"
+  ],
+  "injectors": { "defaultRequire": 1 }
+}
