@@ -12,7 +12,7 @@ This mod is currently in Alpha. No results are guarranteed in this stage and ple
 - Client-side only.
 
 ## Contributors
-This mod was made mostly by me. However, all Objective C++ code was made by SkaterKurtKool. Hes rlly amazing :DDDD
+This mod not solely made by me. All Objective C++ code was made by SkaterKurtKool. Hes rlly amazing :DDDD. I only do Java so he was like rlly helpful. he made all the C stuff.
 
 
 ## Install
