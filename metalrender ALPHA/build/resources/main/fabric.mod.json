@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "metarender",
+  "version": "1.0.0",
+  "name": "MetalRender",
+  "description": "Metal-based Sodium renderer for macOS, Sodium backend.",
+  "authors": ["PebblesBoon"],
+  "license": "Custom License",
+  "icon": "assets/metalrender/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "pebblesboon.metalrender.MetalRenderClient"
+    ]
+  },
+  "mixins": [
+    "metarender.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.7",
+    "minecraft": "1.21",
+    "fabric-api": "*"
+  }
+}

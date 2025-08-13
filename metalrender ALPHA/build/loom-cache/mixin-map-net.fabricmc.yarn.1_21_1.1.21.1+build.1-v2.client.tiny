@@ -1,0 +1,2 @@
+v1	named	intermediary
+FIELD	pebblesboon/metalrender/mixins/GameRendererHookMixin	Lnet/minecraft/client/MinecraftClient;	client	field_4015
