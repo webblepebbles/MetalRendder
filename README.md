@@ -3,13 +3,14 @@
 Welcome to MetalRender! This mod is a Optimisation mod for MC 1.21 versions and above. It uses Mesh Shading on Metal GPUs to speed up chunk rendering.
 This mod is currently in Alpha. No results are guarranteed in this stage and please save important stuff, this mod uses native Objective C++.
 
-## Features
-- Works with Fabric 1.21.x.
-- Needs Sodium.
-- Uses Java 21.
-- Uses native Metal code with JNI.
-- Can fall back to OpenGL if Metal fails.
-- Client-side only.
+
+## Dependencies
+- Sodium                        |Required
+- Fabric                        |Required
+- Fabric API                    |Required
+- Minecraft java 1.21.x         |Required
+- Java >21 (for building)       |Required
+- a bowl of ramen noodles   `   |Recommended
 
 ## Install
 1. Install Fabric Loader.
