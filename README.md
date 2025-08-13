@@ -11,6 +11,10 @@ This mod is currently in Alpha. No results are guarranteed in this stage and ple
 - Can fall back to OpenGL if Metal fails.
 - Client-side only.
 
+## Contributors
+This mod was made mostly by me. However, all Objective C++ code was made by SkaterKurtKool. Hes rlly amazing :DDDD
+
+
 ## Install
 1. Install Fabric Loader.
 2. Install Sodium.
