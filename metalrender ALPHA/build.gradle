@@ -1,0 +1,44 @@
+plugins {
+    id 'fabric-loom' version '1.11.2'
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.fabricmc.net/' }
+    maven { url 'https://api.modrinth.com/maven' } // Sodium
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:1.21.1"
+    mappings "net.fabricmc:yarn:1.21.1+build.1:v2"
+    modImplementation "net.fabricmc:fabric-loader:0.16.7"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.103.0+1.21.1"
+    modCompileOnly "maven.modrinth:sodium:mc1.21.1-0.5.11"
+
+    // Mixin annotations
+    annotationProcessor "org.spongepowered:mixin:0.8.5:processor"
+}
+
+loom {
+    splitEnvironmentSourceSets()
+}
+
+sourceSets {
+    client {
+        java.srcDirs = ["src/client/java"]
+        resources.srcDirs = ["src/client/resources"]
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "UTF-8"
+}
+
+tasks.processResources {
+    from("src/main/resources")
+    from("src/client/resources")
+}
