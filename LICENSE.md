@@ -105,7 +105,7 @@ For questions or permissions, contact the author via the GitHub Issues page or t
 | Distribute modified versions | ✅       | With attribution + license copy                  |
 | Use on monetized server      | ✅       | With link to free version                        |
 | Include in paid modpack      | ✅       | With link to free version                        |
-| Sell the Mod itself          | ✅       | With link to free version                        |
+| Sell the Mod itself          | no       | No, this mod should and always will be free      |
 
 ---
 
