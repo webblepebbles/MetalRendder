@@ -2,7 +2,7 @@
 
 Welcome to MetalRender! This mod is a Optimisation mod for MC 1.21 versions and above. It uses Mesh Shading on Metal GPUs to speed up chunk rendering.
 This mod is currently in Alpha. No results are guarranteed in this stage and please save important stuff, this mod uses native Objective C++.
-
+This mod will now recieve Nightly updates, no nightly releases are certain to be stable.
 
 ## Dependencies
 - Sodium                        |Required
