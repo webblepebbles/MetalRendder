@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "metalrender",
+  "version": "${version}",
+  "name": "MetalRender",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.metalrender.MetalRenderMod"]
+  },
+  "mixins": [
+    "metalrender.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.5",
+    "minecraft": ">=1.21.1",
+    "fabric": "*",
+    "sodium": ">=0.6.0"
+  }
+}

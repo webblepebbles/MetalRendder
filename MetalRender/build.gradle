@@ -1,0 +1,50 @@
+plugins {
+    id 'fabric-loom' version '1.11-SNAPSHOT'
+    id 'java'
+}
+
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(21) }
+    withSourcesJar()
+}
+
+repositories {
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+    }
+    maven { url = "https://maven.fabricmc.net/" }
+    mavenCentral()
+}
+
+dependencies {
+    minecraft 'com.mojang:minecraft:1.21.8'
+    mappings loom.officialMojangMappings()
+    modImplementation 'net.fabricmc:fabric-loader:0.16.5'
+    modImplementation 'net.fabricmc.fabric-api:fabric-api:0.102.0+1.21.1'
+    implementation 'org.lwjgl:lwjgl:3.3.4'
+    implementation 'org.lwjgl:lwjgl-glfw:3.3.4'
+    modImplementation "maven.modrinth:sodium:mc1.21.1-0.6.0"
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 21
+}
+
+loom {
+    splitEnvironmentSourceSets()
+}
+
+processResources {
+    inputs.property "version", project.version
+    filesMatching('fabric.mod.json') { expand version: project.version }
+}
+
+tasks.register('buildNative') {
+    doLast {
+        def script = file('src/main/native/build_native.sh')
+        exec { commandLine 'bash', script.absolutePath }
+    }
+}
+
+tasks.build.dependsOn tasks.buildNative
