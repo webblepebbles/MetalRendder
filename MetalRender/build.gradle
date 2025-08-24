@@ -19,10 +19,10 @@ repositories {
 
 dependencies {
     minecraft 'com.mojang:minecraft:1.21.8'
-    modImplementation 'net.fabricmc:fabric-loader:0.16.5'
-    modImplementation 'net.fabricmc.fabric-api:fabric-api:0.102.0+1.21.1'
-    implementation 'org.lwjgl:lwjgl:3.3.4'
-    implementation 'org.lwjgl:lwjgl-glfw:3.3.4'
+    modImplementation 'net.fabricmc:fabric-loader:0.17.2'
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.131.0+1.21.8"
+    implementation 'org.lwjgl:lwjgl:3.3.3'
+    implementation 'org.lwjgl:lwjgl-glfw:3.3.3'
     modImplementation "maven.modrinth:sodium:mc1.21.6-0.6.13-fabric"
     mappings "net.fabricmc:yarn:1.21.6+build.1:v2"
     loom {

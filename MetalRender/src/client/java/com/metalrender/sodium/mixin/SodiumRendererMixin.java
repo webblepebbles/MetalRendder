@@ -1,5 +1,5 @@
 package com.metalrender.sodium.mixin;
-import com.metalrender.MetalRenderMod;
+import com.metalrender.MetalRenderClient;
 import com.metalrender.sodium.MetalRendererBackend;
 import net.caffeinemc.mods.sodium.client.render.SodiumWorldRenderer;
 import org.spongepowered.asm.mixin.Mixin;
@@ -13,7 +13,7 @@ public class SodiumRendererMixin {
 
     @Inject(method = "<init>", at = @At("TAIL"))
     private void metalrender$init(net.minecraft.client.MinecraftClient client, CallbackInfo ci) {
-        if (!MetalRenderMod.enabled) return;
+        if (!MetalRenderClient.isEnabled()) return;
         metal = new MetalRendererBackend();
         metal.init();
         metal.resizeIfNeeded();

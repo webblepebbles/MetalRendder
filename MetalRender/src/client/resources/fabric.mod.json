@@ -1,17 +1,23 @@
 {
   "schemaVersion": 1,
   "id": "metalrender",
-  "version": "${version}",
+  "version": "0.1",
+  "license": "Apache v2",
+  "authors": [
+    "pebbles_boon"
+  ],
   "name": "MetalRender",
   "environment": "client",
   "entrypoints": {
-    "client": ["com.metalrender.MetalRenderMod"]
+    "client": [
+      "com.metalrender.MetalRenderClient"
+    ]
   },
   "mixins": [
     "metalrender.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.16.5",
+    "fabricloader": ">=0.17.1",
     "minecraft": ">=1.21.1",
     "fabric": "*",
     "sodium": ">=0.6.0"
