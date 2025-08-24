@@ -1,0 +1,16 @@
+{
+  "mappings": {
+    "com/metalrender/sodium/mixin/SodiumRendererMixin": {
+      "<init>": "Lnet/caffeinemc/mods/sodium/client/render/SodiumWorldRenderer;<init>(Lnet/minecraft/class_310;)V",
+      "setupTerrain": "Lnet/caffeinemc/mods/sodium/client/render/SodiumWorldRenderer;setupTerrain(Lnet/minecraft/class_4184;Lnet/caffeinemc/mods/sodium/client/render/viewport/Viewport;Lnet/caffeinemc/mods/sodium/client/util/FogParameters;ZZLnet/caffeinemc/mods/sodium/client/render/chunk/ChunkRenderMatrices;)V"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "com/metalrender/sodium/mixin/SodiumRendererMixin": {
+        "<init>": "Lnet/caffeinemc/mods/sodium/client/render/SodiumWorldRenderer;<init>(Lnet/minecraft/class_310;)V",
+        "setupTerrain": "Lnet/caffeinemc/mods/sodium/client/render/SodiumWorldRenderer;setupTerrain(Lnet/minecraft/class_4184;Lnet/caffeinemc/mods/sodium/client/render/viewport/Viewport;Lnet/caffeinemc/mods/sodium/client/util/FogParameters;ZZLnet/caffeinemc/mods/sodium/client/render/chunk/ChunkRenderMatrices;)V"
+      }
+    }
+  }
+}

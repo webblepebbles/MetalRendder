@@ -60,7 +60,7 @@ JNIEXPORT jboolean JNICALL Java_com_metalrender_nativebridge_MetalBackend_suppor
 }
 
 JNIEXPORT jlong JNICALL Java_com_metalrender_nativebridge_MetalBackend_init(JNIEnv* env, jclass cls, jlong nsWindowPtr, jboolean srgb) {
-    NSWindow* window = (NSWindow*)nsWindowPtr;
+    NSWindow* window = (__bridge NSWindow*)(void*)nsWindowPtr;
     id<MTLDevice> device = MTLCreateSystemDefaultDevice();
     CAMetalLayer* layer = [CAMetalLayer layer];
     layer.device = device;
@@ -77,8 +77,13 @@ JNIEXPORT jlong JNICALL Java_com_metalrender_nativebridge_MetalBackend_init(JNIE
     s->useMesh = NO;
     CGSize size = CGSizeMake(view.bounds.size.width, view.bounds.size.height);
     s->depthTex = makeDepth(device, size);
-    matrix_float4x4 I = (matrix_float4x4){ (vector_float4){1,0,0,0}, (vector_float4){0,1,0,0}, (vector_float4){0,0,1,0}, (vector_float4){0,0,0,1} };
-    s->viewProj = I;
+   matrix_float4x4 identityMatrix = (matrix_float4x4){
+       (vector_float4){1,0,0,0},
+       (vector_float4){0,1,0,0},
+       (vector_float4){0,0,1,0},
+       (vector_float4){0,0,0,1}
+   };
+   s->viewProj = identityMatrix;
     return (jlong)s;
 }
 

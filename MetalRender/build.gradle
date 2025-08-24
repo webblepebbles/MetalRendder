@@ -19,14 +19,27 @@ repositories {
 
 dependencies {
     minecraft 'com.mojang:minecraft:1.21.8'
-    mappings loom.officialMojangMappings()
     modImplementation 'net.fabricmc:fabric-loader:0.16.5'
     modImplementation 'net.fabricmc.fabric-api:fabric-api:0.102.0+1.21.1'
     implementation 'org.lwjgl:lwjgl:3.3.4'
     implementation 'org.lwjgl:lwjgl-glfw:3.3.4'
-    modImplementation "maven.modrinth:sodium:mc1.21.1-0.6.0"
+    modImplementation "maven.modrinth:sodium:mc1.21.6-0.6.13-fabric"
+    mappings "net.fabricmc:yarn:1.21.6+build.1:v2"
+    loom {
+        runs {
+            client {
+                client()
+            }
+        }
+    }
 }
-
+tasks.named("processResources") {
+    dependsOn("buildNative")
+    from("build/native") {
+        include "libmetalrender.dylib"
+        into "natives"  // inside JAR under /natives/
+    }
+}
 tasks.withType(JavaCompile).configureEach {
     options.release = 21
 }
@@ -43,8 +56,29 @@ processResources {
 tasks.register('buildNative') {
     doLast {
         def script = file('src/main/native/build_native.sh')
-        exec { commandLine 'bash', script.absolutePath }
+        exec {
+            environment "JAVA_HOME", System.getenv("JAVA_HOME") ?: org.gradle.internal.jvm.Jvm.current().javaHome.absolutePath
+            commandLine 'bash', script.absolutePath
+        }
     }
 }
 
 tasks.build.dependsOn tasks.buildNative
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ["src/main/java"]
+        }
+    }
+    client {
+        java {
+            srcDirs = ["src/client/java"]
+        }
+        compileClasspath += main.compileClasspath
+        runtimeClasspath += main.runtimeClasspath
+    }
+}
+tasks.named("processResources") {
+    dependsOn("buildNative")
+}
