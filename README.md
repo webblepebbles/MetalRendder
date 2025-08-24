@@ -5,12 +5,16 @@ This mod is currently in Alpha. No results are guarranteed in this stage and ple
 
 
 ## Dependencies
-- Sodium                        |Required
-- Fabric                        |Required
-- Fabric API                    |Required
-- Minecraft java 1.21.x         |Required
-- Java >21 (for building)       |Required
-- a bowl of ramen noodles   `   |Recommended
+| Dependency                          | Version                     | Scope              | Notes                                                                 |
+|-------------------------------------|-----------------------------|--------------------|-----------------------------------------------------------------------|
+| Minecraft                           | 1.21.8                      | minecraft          | Target game version.                                                  |
+| Fabric Loader                       | >0.17.2                     | modImplementation  | Required mod loader.                                                  |
+| Fabric API                          | >0.131.0+1.21.8             | modImplementation  | Provides hooks & utilities for mods.                                  |
+| Yarn Mappings                       | 1.21.6+build.1 (v2)         | mappings           | Minecraft deobfuscation mappings (slightly behind 1.21.8).            |
+| Sodium                              | >mc1.21.6-0.6.13-fabric     | modImplementation  | Rendering optimization mod.                                           |
+| LWJGL (core)                        | 3.3.4                       | implementation     | Required for graphics bindings.                                       |
+| LWJGL GLFW                          | 3.3.4                       | implementation     | Required for window/input handling.                                   |
+| SpongePowered Mixin (via Fabric)    | 0.8.7                       | runtime (included) | Already bundled with Fabric Loader.                                   |
 
 ## Install
 1. Install Fabric Loader.
