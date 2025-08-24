@@ -1,5 +1,3 @@
-Perfect — here’s that first dual-license template, but formatted cleanly as a proper Markdown LICENSE.md file you can drop directly into your repo:
-
 # 📜 License for MetalRender
 
 **Copyright (c) 2025 pebbles_boon**
@@ -41,12 +39,6 @@ Full license text: 👉 [https://creativecommons.org/licenses/by/4.0/](https://c
 This project is a third-party modification for Minecraft and is subject to the **Mojang End User License Agreement (EULA)**. Nothing in this license overrides or modifies the Mojang EULA.  
 
 ---
-
-## ✅ Summary of Rights Granted
-
-- **Code** → Apache 2.0 (open, modifiable, attribution required, anti-false-endorsement)  
-- **Assets** → CC BY 4.0 (free use, modification, commercial allowed, attribution required)  
-- **Minecraft EULA** still applies  
 
 
 ⸻
