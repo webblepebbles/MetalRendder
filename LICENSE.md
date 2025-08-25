@@ -39,8 +39,3 @@ Full license text: 👉 [https://creativecommons.org/licenses/by/4.0/](https://c
 This project is a third-party modification for Minecraft and is subject to the **Mojang End User License Agreement (EULA)**. Nothing in this license overrides or modifies the Mojang EULA.  
 
 ---
-
-
-⸻
-
-Would you like me to also append a short TL;DR rights table (like in your original custom license) under the summary, so it’s extra clear for modpack makers and server owners?
